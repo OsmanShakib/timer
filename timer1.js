@@ -1,0 +1,11 @@
+const numbers = process.argv.slice(2)
+
+const timer = function(nums) {
+    for (const num of nums) {
+        setTimeout(() => { 
+            console.log(num)
+            process.stdout.write('\x07');
+        }, (num * 1000));
+    }
+}
+timer(numbers);
